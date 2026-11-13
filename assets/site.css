@@ -383,3 +383,9 @@ footer .fshield{height:96px;margin-bottom:14px}
 .carshot{background:var(--steel);border-radius:4px;padding:30px;margin:10px 0 24px}
 @media (max-width:1020px){.hero .hslash{display:none}.hero .badge{width:62%;padding-bottom:28px}.hubgrid{grid-template-columns:1fr 1fr}.phero .pbadge{width:130px}.logo img{height:20px}}
 @media (max-width:540px){.hubgrid{grid-template-columns:1fr}}
+
+/* hero intro without GSAP: headline lines rise once, text below is never hidden (keeps LCP fast) */
+@keyframes lnUp{from{transform:translateY(105%)}to{transform:none}}
+.hero h1 .ln>span{animation:lnUp .7s cubic-bezier(.2,.8,.2,1) both}
+.hero h1 .ln:nth-child(2)>span{animation-delay:.08s}.hero h1 .ln:nth-child(3)>span{animation-delay:.16s}.hero h1 .ln:nth-child(4)>span{animation-delay:.24s}
+@media (prefers-reduced-motion:reduce){.hero h1 .ln>span{animation:none}}
