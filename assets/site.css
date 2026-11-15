@@ -384,6 +384,8 @@ footer .fshield{height:96px;margin-bottom:14px}
 @media (max-width:1020px){.hero .hslash{display:none}.hero .badge{width:62%;padding-bottom:28px}.hubgrid{grid-template-columns:1fr 1fr}.phero .pbadge{width:130px}.logo img{height:20px}}
 @media (max-width:540px){.hubgrid{grid-template-columns:1fr}}
 
+.logo img{height:40px;width:auto;filter:none}footer .flogo{height:52px;width:auto;margin-bottom:16px}@media (max-width:1020px){.logo img{height:34px}}
+
 /* hero intro without GSAP: headline lines rise once, text below is never hidden (keeps LCP fast) */
 @keyframes lnUp{from{transform:translateY(105%)}to{transform:none}}
 .hero h1 .ln>span{animation:lnUp .7s cubic-bezier(.2,.8,.2,1) both}
