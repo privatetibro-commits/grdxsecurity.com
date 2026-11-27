@@ -258,6 +258,76 @@ footer .wrap{padding-block:20px;display:flex;justify-content:space-between;gap:1
 .steps .how p{color:#B9C0CA}
 @media (max-width:900px){.steps .how::before,.steps .how::after{left:27px;right:auto;top:0;bottom:0;width:2px;height:auto}.steps .how::after{height:var(--fill,0%);bottom:auto}.steps .how>div{display:grid;grid-template-columns:56px 1fr;column-gap:18px;padding:0 0 28px}.steps .how .n{grid-row:span 2}.steps .how h3{margin-top:12px}}
 .steps .how>div.lit .n,.steps .how .n{color:#fff!important}.steps+.s{padding-top:72px!important}
+
+/* extras */
+.lic{background:#0f1115;color:var(--on-dark);border-top:1px solid rgba(255,255,255,.08)}
+.lic .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.lic button{all:unset;cursor:pointer;padding:20px 22px;border-right:1px solid rgba(255,255,255,.08);display:block;transition:background .2s}
+.lic button:last-child{border-right:0}
+.lic button:hover,.lic button[aria-expanded=true]{background:rgba(92,157,255,.1)}
+.lic b{display:flex;align-items:center;gap:10px;font:700 18px/1.1 var(--disp);text-transform:uppercase}
+.lic b::before{content:"";width:10px;height:10px;border-radius:50%;background:#2ecc71;box-shadow:0 0 0 4px rgba(46,204,113,.18)}
+.lic small{display:block;color:var(--on-dark-mut);font-size:13px;margin-top:6px}
+.lic span{display:block;max-height:0;overflow:hidden;color:#C9CFD8;font-size:14px;transition:max-height .35s ease,margin .35s}
+.lic button[aria-expanded=true] span{max-height:120px;margin-top:10px}
+.tabs{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:4px;margin-top:24px;background:var(--card)}
+.tabs button{all:unset;cursor:pointer;padding:10px 18px;border-radius:999px;font-weight:700;font-size:15px;transition:all .25s}
+.tabs button[aria-selected=true]{background:var(--blue);color:#fff}
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px}
+.cmp>div{background:var(--card);border:2px solid var(--line);padding:24px;border-radius:4px;transition:all .3s}
+.cmp>div.on{border-color:var(--blue);box-shadow:0 18px 40px -20px rgba(11,92,255,.5);transform:translateY(-3px)}
+.cmp>div:not(.on){opacity:.55}
+.cmp h3{font-size:26px;margin:0 0 14px}
+.cmp dl{margin:0;display:grid;grid-template-columns:110px 1fr;gap:10px 12px;font-size:15px}
+.cmp dt{font:500 12px/1.6 var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--mut)}
+.cmp dd{margin:0}
+.jur{display:grid;grid-template-columns:260px 1fr;gap:24px;margin-top:28px;align-items:stretch}
+.jur .opts{display:flex;flex-direction:column;gap:8px}
+.jur .opts button{all:unset;cursor:pointer;padding:18px 20px;border:1px solid var(--line);background:var(--card);border-radius:3px;font:700 20px/1 var(--disp);text-transform:uppercase;transition:all .2s;display:flex;justify-content:space-between}
+.jur .opts button::after{content:"→";color:var(--mut)}
+.jur .opts button[aria-selected=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.jur .opts button[aria-selected=true]::after{color:var(--blue2)}
+.jur .out{background:var(--ink);color:var(--on-dark);padding:30px;border-radius:3px;position:relative;overflow:hidden}
+.jur .out::before{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;background:radial-gradient(rgba(11,92,255,.35),transparent 70%)}
+.jur .out small{font:500 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--blue2)}
+.jur .out h3{font-size:30px;color:#fff;margin:12px 0 10px}
+.jur .out p{color:#C9CFD8;margin:0 0 8px}
+.jur .out .k{animation:up .35s both}
+.phase{margin-top:30px;background:var(--card);border:1px solid var(--line);padding:28px;border-radius:4px}
+.phase input{width:100%;accent-color:var(--blue);height:6px;cursor:pointer}
+.phase .lbl{display:flex;justify-content:space-between;font:500 12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--mut);margin-top:12px}
+.phase .lbl span.on{color:var(--blue);font-weight:700}
+.phase .res{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:22px}
+.phase .res h4{margin:0 0 6px;font:500 12px/1 var(--mono);text-transform:uppercase;letter-spacing:.1em;color:var(--mut)}
+.phase .res p{margin:0;font-size:17px;animation:up .35s both}
+.phase .res b{font:700 22px/1.2 var(--disp);text-transform:uppercase;display:block;animation:up .35s both}
+.rep{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:center;margin-top:10px}
+.rcard{background:#fff;border:1px solid var(--line);border-radius:6px;box-shadow:0 30px 60px -30px rgba(10,10,11,.45);overflow:hidden;font-size:14px}
+.rcard header{background:var(--ink);color:#fff;padding:14px 18px;display:flex;justify-content:space-between;font:500 12px/1.3 var(--mono);letter-spacing:.06em;text-transform:uppercase}
+.rcard header em{font-style:normal;color:#2ecc71}
+.rcard ol{list-style:none;margin:0;padding:6px 18px 12px}
+.rcard li{display:grid;grid-template-columns:64px 1fr auto;gap:12px;align-items:center;padding:12px 0;border-bottom:1px dashed var(--line);opacity:0;transform:translateX(-10px);transition:all .4s}
+.rcard.in li{opacity:1;transform:none}
+.rcard li:last-child{border-bottom:0}
+.rcard time{font:600 13px/1 var(--mono);color:var(--blue)}
+.rcard .tag{font:500 11px/1 var(--mono);padding:5px 7px;border-radius:2px;background:#e9f7ef;color:#1d8a4c}
+.rcard .tag.w{background:#fff4e5;color:#b35c00}
+.rcard .ph{display:inline-block;width:18px;height:14px;border:1.5px solid var(--mut);border-radius:2px;vertical-align:-2px;margin-right:6px}
+.rcard footer{padding:10px 18px;background:var(--paper);color:var(--mut);font-size:12px}
+.cov{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center;margin-top:26px}
+.cov svg{width:100%;height:auto}
+.cov svg .rg{cursor:pointer;transition:all .25s}
+.cov svg .rg path{fill:#e3e8f2;stroke:#fff;stroke-width:3;transition:fill .25s}
+.cov svg .rg:hover path,.cov svg .rg.on path{fill:var(--blue)}
+.cov svg .rg text{font:700 15px var(--disp,sans-serif);text-transform:uppercase;fill:var(--fg);pointer-events:none}
+.cov svg .rg:hover text,.cov svg .rg.on text{fill:#fff}
+.cov svg .hq circle{fill:var(--ink)}
+.cov svg .hq .p{fill:none;stroke:var(--blue);stroke-width:2;animation:pr 2s infinite;transform-origin:center;transform-box:fill-box}
+@keyframes pr{from{transform:scale(1);opacity:1}to{transform:scale(3);opacity:0}}
+.cov .info h3{font-size:30px;margin:0 0 10px}
+.cov .info ul{margin:14px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.cov .info li{padding:8px 12px;border:1px solid var(--line);border-radius:999px;font-size:14px;background:var(--card);animation:up .3s both}
+@media (max-width:900px){.lic .wrap,.cmp,.jur,.phase .res,.rep,.cov{grid-template-columns:1fr}.lic button{border-right:0;border-bottom:1px solid rgba(255,255,255,.08)}.tabs{display:flex}.tabs button{flex:1;text-align:center}}
 </style></head><body>
 <header class="bar"><div class="wrap">
   <img src="img/grdx-logo.png" alt="GRDX Security Services">
@@ -291,6 +361,11 @@ footer .wrap{padding-block:20px;display:flex;justify-content:space-between;gap:1
   </div>
 </section>
 
+<section class="lic" aria-label="Licences"><div class="wrap">
+<button type="button" aria-expanded="false"><b>Virginia DCJS</b><small>Licensed in Virginia</small><span>Northern Virginia officers hold the licence Virginia requires, checked before an officer is ever scheduled.</span></button>
+<button type="button" aria-expanded="false"><b>D.C. SOLB</b><small>Licensed in Washington, D.C.</small><span>GRDX was founded in D.C. in 2018. Special Police work in the District falls under D.C. licensing.</span></button>
+<button type="button" aria-expanded="false"><b>Maryland State Police</b><small>Licensed in Maryland</small><span>Maryland work runs from Chevy Chase and Bethesda up the I-270 corridor, under a Maryland licence.</span></button>
+</div></section>
 <section class="s"><div class="wrap">
   <span class="eyebrow">How it works</span>
   <h2>Marked or unmarked, scheduled or random</h2>
@@ -298,6 +373,9 @@ footer .wrap{padding-block:20px;display:flex;justify-content:space-between;gap:1
   <div class="when"><div><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8.4-8 9-4.6-.6-8-4.5-8-9V6z"/></svg><h3>Marked patrol</h3><p>A GRDX vehicle and uniformed officer. For lots, communities and retail centers after close.</p></div><div><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8.4-8 9-4.6-.6-8-4.5-8-9V6z"/></svg><h3>Unmarked patrol</h3><p>A car that blends in. For repeat theft, illegal dumping and vacant sites.</p></div><div><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8.4-8 9-4.6-.6-8-4.5-8-9V6z"/></svg><h3>Nightly report</h3><p>Where the officer went, when and what they found, with timestamped photos.</p></div></div>
 </div></section>
 
+<section class="s"><div class="wrap" data-cmp><span class="eyebrow">Compare</span><h2>Marked or unmarked?</h2><p class="intro">Pick marked if you want people to see it and leave. Pick unmarked if you want to catch who keeps coming back.</p>
+<div class="tabs" role="tablist"><button type="button" role="tab" aria-selected="true">Marked patrol</button><button type="button" role="tab" aria-selected="false">Unmarked patrol</button></div>
+<div class="cmp"><div class="on"><h3>Marked patrol</h3><dl><dt>Goal</dt><dd>Deter</dd><dt>Best for</dt><dd>Lots, communities, retail centers after close</dd><dt>People see</dt><dd>GRDX vehicle and uniformed officer</dd></dl></div><div class=""><h3>Unmarked patrol</h3><dl><dt>Goal</dt><dd>Observe and document</dd><dt>Best for</dt><dd>Repeat theft, illegal dumping, vacant sites</dd><dt>People see</dt><dd>A car that blends in</dd></dl></div></div></div></section>
 <section class="s steps"><div class="wrap">
   <span class="eyebrow">How it works</span>
   <h2>From first call to officers on post</h2>
@@ -308,6 +386,8 @@ footer .wrap{padding-block:20px;display:flex;justify-content:space-between;gap:1
   </div>
 </div></section>
 
+<section class="s"><div class="wrap rep"><div><span class="eyebrow">What you get</span><h2>Where the officer went, when, and what they found</h2><p class="intro">A quiet night is a short report. It still shows the gate was locked and nobody was in the stairwell, which matters to an insurer later.</p></div>
+<div class="rcard"><header><span>Sample nightly report</span><em>&#9679; GPS verified</em></header><ol><li><time>22:41</time><span><i class="ph"></i>Front gate locked</span><em class="tag">Clear</em></li><li><time>00:18</time><span><i class="ph"></i>Dumpster enclosure</span><em class="tag">Clear</em></li><li><time>01:57</time><span><i class="ph"></i>Back fence, gap found</span><em class="tag w">Flagged</em></li><li><time>03:34</time><span><i class="ph"></i>Loading dock doors</span><em class="tag">Clear</em></li></ol><footer>Illustration of the report format. Every stop is time-stamped, GPS-logged and photographed.</footer></div></div></section>
 <section class="s" style="padding-top:0"><div class="wrap">
   <span class="eyebrow">Who runs it</span>
   <h2>Led by current and former law enforcement</h2>
@@ -324,6 +404,13 @@ footer .wrap{padding-block:20px;display:flex;justify-content:space-between;gap:1
   <div class="who"><div><b>HOAs &amp; communities</b><span>Pools, clubhouses, common lots</span></div><div><b>Construction sites</b><span>Equipment and materials after hours</span></div><div><b>Office parks</b><span>Several buildings, one route</span></div><div><b>Retail centers</b><span>After-close lots, loading docks</span></div></div>
 </div></section>
 
+<section class="s"><div class="wrap cov" data-c="{&quot;va&quot;: [&quot;Northern Virginia&quot;, &quot;Headquartered in Sterling, off Route 28. Loudoun is the county we know best.&quot;, [&quot;Loudoun&quot;, &quot;Fairfax&quot;, &quot;Arlington&quot;, &quot;Alexandria&quot;, &quot;Prince William&quot;]], &quot;dc&quot;: [&quot;Washington, D.C.&quot;, &quot;Where GRDX was founded in 2018 and where its standards were set.&quot;, [&quot;Northwest D.C.&quot;, &quot;Downtown&quot;, &quot;Special Police posts&quot;]], &quot;md&quot;: [&quot;Maryland&quot;, &quot;From Chevy Chase and Bethesda up the I-270 corridor, under a Maryland licence.&quot;, [&quot;Montgomery County&quot;, &quot;Prince George&#x27;s County&quot;]]}">
+<svg viewBox="0 0 420 340" role="img" aria-label="Coverage map: Northern Virginia, Washington D.C. and Maryland">
+<g class="rg" data-k="md"><path d="M150 20 L400 20 L400 170 L300 190 L250 150 L215 120 L180 95 Z"/><text x="300" y="90">Maryland</text></g>
+<g class="rg" data-k="va"><path d="M20 80 L150 20 L180 95 L215 120 L230 165 L260 210 L240 320 L20 320 Z"/><text x="70" y="230">N. Virginia</text></g>
+<g class="rg" data-k="dc"><path d="M215 120 L250 150 L232 170 L205 150 Z"/><text x="258" y="180" style="font-size:13px">D.C.</text></g>
+<g class="hq"><circle class="p" cx="120" cy="120" r="7"/><circle cx="120" cy="120" r="7"/><text x="132" y="116" style="font:600 12px sans-serif;fill:#111">HQ · Sterling</text></g>
+</svg><div class="info" aria-live="polite"></div></div></section>
 <section class="s" style="padding-top:0"><div class="wrap faq">
   <span class="eyebrow">Questions</span>
   <h2>Before you call</h2>
@@ -357,4 +444,11 @@ var pg=document.querySelector('.prog');addEventListener('scroll',function(){var 
 var ans=document.querySelector('.pick .ans');document.querySelectorAll('.pick button').forEach(function(b){b.addEventListener('click',function(){document.querySelectorAll('.pick button').forEach(function(o){o.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');ans.innerHTML=b.dataset.a+' <a href="#request">Book the free walk-through &rarr;</a>';if(window.clarity)clarity('event','pick_'+b.textContent.replace(/\W+/g,'_'))})});
 var st=document.querySelector('.status');if(st){var t=function(){var d=new Date().toLocaleTimeString('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'});st.lastChild.nodeValue=(innerWidth<600?'Supervisor on duty · ':'A supervisor is on duty right now · ')+d+' ET'};t();setInterval(t,30000)}
 })();</script>
-</body></html>
+<script>(function(){
+document.querySelectorAll('.lic button').forEach(function(b){b.addEventListener('click',function(){var o=b.getAttribute('aria-expanded')=='true';document.querySelectorAll('.lic button').forEach(function(x){x.setAttribute('aria-expanded','false')});b.setAttribute('aria-expanded',o?'false':'true')})});
+document.querySelectorAll('[data-cmp]').forEach(function(w){var bs=w.querySelectorAll('.tabs button'),cs=w.querySelectorAll('.cmp>div');bs.forEach(function(b,i){b.addEventListener('click',function(){bs.forEach(function(x,j){x.setAttribute('aria-selected',i==j)});cs.forEach(function(c,j){c.classList.toggle('on',i==j)})})})});
+var J=document.querySelector('.jur');if(J){var D=JSON.parse(J.dataset.j),bs=J.querySelectorAll('.opts button'),o=J.querySelector('.out');var show=function(i){bs.forEach(function(x,j){x.setAttribute('aria-selected',i==j)});var d=D[i];o.innerHTML='<div class="k"><small>'+d[0]+'</small><h3>'+d[1]+'</h3><p>'+d[2]+'</p><p>'+d[3]+'</p></div>'};bs.forEach(function(b,i){b.addEventListener('click',function(){show(i)})});show(0)}
+var P=document.querySelector('.phase');if(P){var D2=JSON.parse(P.dataset.p),r=P.querySelector('input'),ls=P.querySelectorAll('.lbl span'),res=P.querySelector('.res');var up=function(){var d=D2[r.value];ls.forEach(function(s,i){s.classList.toggle('on',i==r.value)});res.innerHTML='<div><h4>What is at risk</h4><b>'+d[0]+'</b></div><div><h4>Coverage we usually suggest</h4><p>'+d[1]+'</p></div>'};r.addEventListener('input',up);up()}
+var C=document.querySelector('.cov');if(C){var D3=JSON.parse(C.dataset.c),gs=C.querySelectorAll('.rg'),inf=C.querySelector('.info');var sh=function(k){gs.forEach(function(g){g.classList.toggle('on',g.dataset.k==k)});var d=D3[k];inf.innerHTML='<span class="eyebrow">Coverage area</span><h3>'+d[0]+'</h3><p>'+d[1]+'</p><ul>'+d[2].map(function(x,i){return '<li style="animation-delay:'+i*50+'ms">'+x+'</li>'}).join('')+'</ul>'};gs.forEach(function(g){g.addEventListener('mouseenter',function(){sh(g.dataset.k)});g.addEventListener('click',function(){sh(g.dataset.k)})});sh('va')}
+var R=document.querySelector('.rcard');if(R){R.querySelectorAll('li').forEach(function(l,i){l.style.transitionDelay=i*180+'ms'});new IntersectionObserver(function(e,o){if(e[0].isIntersecting){R.classList.add('in');o.disconnect()}},{threshold:.3}).observe(R)}
+})();</script></body></html>
