@@ -327,6 +327,7 @@ footer .wrap{padding-block:20px;display:flex;justify-content:space-between;gap:1
 .cov .info h3{font-size:30px;margin:0 0 10px}
 .cov .info ul{margin:14px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
 .cov .info li{padding:8px 12px;border:1px solid var(--line);border-radius:999px;font-size:14px;background:var(--card);animation:up .3s both}
+.regs{display:flex;flex-direction:column;gap:10px}.regs .rg{all:unset;cursor:pointer;padding:22px 24px;border:1px solid var(--line);background:var(--card);border-radius:3px;font:700 24px/1 var(--disp);text-transform:uppercase;transition:all .2s}.regs .rg:hover,.regs .rg.on{background:var(--ink);color:#fff;border-color:var(--ink)}
 @media (max-width:900px){.lic .wrap,.cmp,.jur,.phase .res,.rep,.cov{grid-template-columns:1fr}.lic button{border-right:0;border-bottom:1px solid rgba(255,255,255,.08)}.tabs{display:flex}.tabs button{flex:1;text-align:center}}
 </style></head><body>
 <header class="bar"><div class="wrap">
@@ -401,13 +402,8 @@ footer .wrap{padding-block:20px;display:flex;justify-content:space-between;gap:1
   <div class="who"><div><b>Washington, D.C.</b><span>Special Police Officer commission</span></div><div><b>Virginia</b><span>Special conservator of the peace</span></div><div><b>Maryland</b><span>Its own framework</span></div><div><b>Every arrest</b><span>Report with photos, reviewed same shift</span></div></div>
 </div></section>
 
-<section class="s"><div class="wrap cov" data-c="{&quot;va&quot;: [&quot;Northern Virginia&quot;, &quot;Headquartered in Sterling, off Route 28. Loudoun is the county we know best.&quot;, [&quot;Loudoun&quot;, &quot;Fairfax&quot;, &quot;Arlington&quot;, &quot;Alexandria&quot;, &quot;Prince William&quot;]], &quot;dc&quot;: [&quot;Washington, D.C.&quot;, &quot;Where GRDX was founded in 2018 and where its standards were set.&quot;, [&quot;Northwest D.C.&quot;, &quot;Downtown&quot;, &quot;Special Police posts&quot;]], &quot;md&quot;: [&quot;Maryland&quot;, &quot;From Chevy Chase and Bethesda up the I-270 corridor, under a Maryland licence.&quot;, [&quot;Montgomery County&quot;, &quot;Prince George&#x27;s County&quot;]]}">
-<svg viewBox="0 0 420 340" role="img" aria-label="Coverage map: Northern Virginia, Washington D.C. and Maryland">
-<g class="rg" data-k="md"><path d="M150 20 L400 20 L400 170 L300 190 L250 150 L215 120 L180 95 Z"/><text x="300" y="90">Maryland</text></g>
-<g class="rg" data-k="va"><path d="M20 80 L150 20 L180 95 L215 120 L230 165 L260 210 L240 320 L20 320 Z"/><text x="70" y="230">N. Virginia</text></g>
-<g class="rg" data-k="dc"><path d="M215 120 L250 150 L232 170 L205 150 Z"/><text x="258" y="180" style="font-size:13px">D.C.</text></g>
-<g class="hq"><circle class="p" cx="120" cy="120" r="7"/><circle cx="120" cy="120" r="7"/><text x="132" y="116" style="font:600 12px sans-serif;fill:#111">HQ · Sterling</text></g>
-</svg><div class="info" aria-live="polite"></div></div></section>
+<section class="s"><div class="wrap cov" data-c="{&quot;va&quot;: [&quot;Northern Virginia&quot;, &quot;Headquartered in Sterling, off Route 28. Loudoun is the county we know best.&quot;, [&quot;Loudoun&quot;, &quot;Fairfax&quot;, &quot;Arlington&quot;, &quot;Alexandria&quot;, &quot;Prince William&quot;]], &quot;dc&quot;: [&quot;Washington, D.C.&quot;, &quot;Where GRDX was founded in 2018 and where its standards were set.&quot;, [&quot;Northwest D.C.&quot;, &quot;Special Police posts&quot;]], &quot;md&quot;: [&quot;Maryland&quot;, &quot;From Chevy Chase and Bethesda up the I-270 corridor, under a Maryland licence.&quot;, [&quot;Montgomery County&quot;, &quot;Prince George&#x27;s County&quot;]]}">
+<div class="regs" role="tablist"><button type="button" class="rg" data-k="va">Northern Virginia</button><button type="button" class="rg" data-k="dc">Washington, D.C.</button><button type="button" class="rg" data-k="md">Maryland</button></div><div class="info" aria-live="polite"></div></div></section>
 <section class="s" style="padding-top:0"><div class="wrap faq">
   <span class="eyebrow">Questions</span>
   <h2>Before you call</h2>
