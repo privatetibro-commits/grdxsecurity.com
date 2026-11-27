@@ -212,7 +212,37 @@ footer .wrap{padding-block:20px;display:flex;justify-content:space-between;gap:1
   .textus{display:none}
 }
 @media (max-width:520px){.promise .wrap{grid-template-columns:1fr}.logos{grid-template-columns:1fr 1fr}}
-</style><style>body{margin:0}@media(max-width:900px){.callfab{display:none!important}}.form .ghl iframe{width:100%;border:none;min-height:560px;background:#fff;border-radius:4px}.bar .num{text-decoration:none}.close .num{text-decoration:none}</style></head><body>
+</style><style>body{margin:0}@media(max-width:900px){.callfab{display:none!important}}.form .ghl iframe{width:100%;border:none;min-height:560px;background:#fff;border-radius:4px}.bar .num{text-decoration:none}.close .num{text-decoration:none}
+/* --- interactivity layer --- */
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(92,157,255,.7)}80%,100%{box-shadow:0 0 0 10px rgba(92,157,255,0)}}
+@keyframes kb{from{transform:scale(1.04)}to{transform:scale(1.14) translate(-1.5%,-1%)}}
+@keyframes up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.hero .status i{animation:ping 1.8s infinite!important}
+.hero .bg{animation:kb 22s ease-in-out infinite alternate}
+.hero .wrap>div>*{animation:up .7s both}.hero .wrap>div>*:nth-child(2){animation-delay:.08s}.hero .wrap>div>*:nth-child(3){animation-delay:.16s}.hero .wrap>div>*:nth-child(4){animation-delay:.24s}.hero .wrap>div>*:nth-child(n+5){animation-delay:.32s}
+.hero .form{animation:up .8s .2s both}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}.rv.in{opacity:1;transform:none}
+.when div,.how>div,.lead>div,.who div{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;position:relative}
+.when div:hover,.how>div:hover,.lead>div:hover{transform:translateY(-4px);box-shadow:0 14px 30px -14px rgba(11,92,255,.45);border-color:var(--blue)}
+.when div::before,.how>div::before{content:"";position:absolute;left:0;top:0;height:3px;width:0;background:var(--blue);transition:width .35s ease}
+.when div:hover::before,.how>div:hover::before{width:100%}
+.who div:hover{background:#eef3ff}
+.how{position:relative}.how .n{transition:color .3s}.how>div.lit .n{color:var(--blue)}
+.how>div.lit{border-color:var(--blue)}
+.facts>div{transition:background .25s}.facts>div:hover{background:rgba(92,157,255,.12)}
+.pick{margin-top:22px;padding:16px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.04);border-radius:3px;max-width:560px}
+.pick p{margin:0 0 10px;font:500 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--on-dark-mut)}
+.pick .chips{display:flex;flex-wrap:wrap;gap:8px}
+.pick button{font:600 14px/1 inherit;font-family:inherit;color:#fff;background:transparent;border:1px solid rgba(255,255,255,.3);padding:10px 14px;border-radius:999px;cursor:pointer;transition:all .2s}
+.pick button:hover{border-color:var(--blue2)}
+.pick button[aria-pressed=true]{background:var(--blue);border-color:var(--blue)}
+.pick .ans{margin-top:12px;font-size:15px;color:#D3D7DD;min-height:1.4em}
+.pick .ans a{color:var(--blue2);font-weight:700}
+.faq details{transition:background .2s}.faq details:hover summary{color:var(--blue)}
+.faq details p{animation:up .35s both}
+.prog{position:fixed;top:0;left:0;height:3px;background:var(--blue);width:0;z-index:99}
+@media (prefers-reduced-motion:reduce){*,*::before{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style></head><body>
 <header class="bar"><div class="wrap">
   <img src="img/grdx-logo.png" alt="GRDX Security Services">
   <div class="r"><a class="num" href="tel:+18333504739">(833) 350-4739</a><a class="btn fire" href="#request">Free site assessment</a></div>
@@ -230,6 +260,7 @@ footer .wrap{padding-block:20px;display:flex;justify-content:space-between;gap:1
         <a class="btn ghost" href="tel:+18333504739">Call (833) 350-4739</a>
       </div>
       <p class="note">Answered 24/7. Headquartered in Sterling, VA.</p>
+      <div class="pick" id="pick"><p>When do you need cover?</p><div class="chips"><button type="button" data-a="Overnight posts are where most theft happens. We will walk the site after dark.">Overnight</button><button type="button" data-a="Business-hours officers handle lobbies, access and visible deterrence.">Business hours</button><button type="button" data-a="24/7 posts get a full rotation and one named supervisor.">24/7</button><button type="button" data-a="That is normal. We decide it with you on the free site walk.">Not sure yet</button></div><div class="ans" aria-live="polite"></div></div>
       <div class="facts">
         <div><b>Licensed x3</b><span>Virginia DCJS, D.C. SOLB, Maryland State Police</span></div>
         <div><b>24/7 supervisor</b><span>One named contact for your account</span></div>
@@ -299,4 +330,15 @@ footer .wrap{padding-block:20px;display:flex;justify-content:space-between;gap:1
 @media(max-width:900px){.callfab{bottom:84px}}</style><a class="callfab" href="tel:+18333504739" aria-label="Call GRDX 24/7 at (833) 350-4739"><span class="cf-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.7a2 2 0 01-.5 2.1L8 9.8a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.7.7a2 2 0 011.7 2z"/></svg></span><span class="cf-tx"><small>24/7 supervisor</small>(833) 350-4739</span></a>
 <nav class="mbar" aria-label="Quick actions"><a class="btn ghost" href="tel:+18333504739">Call 24/7</a><a class="btn fire" href="#request">Free assessment</a></nav>
 <footer><div class="wrap"><span>GRDX™ Security Services · 46396 Benedict Drive, Suite 200, Sterling, VA 20164</span><span>Emergency? Call 911 first.</span></div></footer>
+<div class="prog" aria-hidden="true"></div>
+<script>(function(){
+var R=matchMedia('(prefers-reduced-motion:reduce)').matches;
+document.querySelectorAll('.s .wrap>*:not(.when):not(.how):not(.lead):not(.who),.when>div,.how>div,.lead>div,.who>div,.close h2').forEach(function(e,i){e.classList.add('rv');e.style.transitionDelay=(e.parentNode.children.length>2?([].indexOf.call(e.parentNode.children,e)%4)*90:0)+'ms'});
+var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(e){R?e.classList.add('in'):io.observe(e)});
+var steps=document.querySelectorAll('.how>div');var so=new IntersectionObserver(function(es){es.forEach(function(x){x.target.classList.toggle('lit',x.isIntersecting)})},{rootMargin:'-40% 0px -40% 0px'});steps.forEach(function(e){so.observe(e)});
+var pg=document.querySelector('.prog');addEventListener('scroll',function(){var h=document.documentElement;pg.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%'},{passive:true});
+var ans=document.querySelector('.pick .ans');document.querySelectorAll('.pick button').forEach(function(b){b.addEventListener('click',function(){document.querySelectorAll('.pick button').forEach(function(o){o.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');ans.innerHTML=b.dataset.a+' <a href="#request">Book the free walk-through &rarr;</a>';if(window.clarity)clarity('event','pick_'+b.textContent.replace(/\W+/g,'_'))})});
+var st=document.querySelector('.status');if(st){var t=function(){var d=new Date().toLocaleTimeString('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'});st.lastChild.nodeValue=(innerWidth<600?'Supervisor on duty · ':'A supervisor is on duty right now · ')+d+' ET'};t();setInterval(t,30000)}
+})();</script>
 </body></html>
